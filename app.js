@@ -14,4 +14,11 @@ app.get("/total", (req, res) => {
 
 });
 
+app.get("/calcular", (req, res) => {
+ 
+    const resultado = Number(req.query.a) + Number(req.query.b);
+ 
+    res.json({ resultado });
+});
+
 module.exports = { app, total };
