@@ -5,7 +5,7 @@ const app = express();
 
 const total = (precio, cant, desc) =>
 
-    precio * cant * (1 + desc);
+    precio * cant * (1 - desc);
     
     app.get("/total", (req, res) => {
 
@@ -13,10 +13,6 @@ const total = (precio, cant, desc) =>
 
     res.json({ total: total(p, c, 0) });
 
-});
-
-app.get("/calcular", (req, res) => {
- res.json({ resultado: eval(req.query.expr) });
 });
 
 module.exports = { app, total };
