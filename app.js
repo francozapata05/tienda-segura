@@ -14,4 +14,10 @@ app.get("/total", (req, res) => {
 
 });
 
+app.get("/calcular", (req, res) => {
+ 
+    res.json({ resultado: eval(req.query.expr) });
+
+});
+
 module.exports = { app, total };
