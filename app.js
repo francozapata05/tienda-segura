@@ -4,7 +4,7 @@ const app = express();
 
 const total = (precio, cant, desc) =>
 
-    precio * cant * (1 + desc);
+    precio * cant * (1 - desc);
 
 app.get("/total", (req, res) => {
 
